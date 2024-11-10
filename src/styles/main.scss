@@ -90,9 +90,6 @@ hr {
     width: 100%;
     background-color: $back;
     z-index: 5;
-    @media (max-width: $r_desk){
-        width: 95%;
-    }
     @media (max-width: $r_tab){
         padding-top: clamp(20px, 5vw, 40px);
         padding-bottom: clamp(20px, 5vw, 40px);
