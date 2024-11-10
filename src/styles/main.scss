@@ -8,6 +8,7 @@ body{
     font-weight: 400;
     color: $dark;
     position: relative;
+    overflow-x: hidden;
 }
 h1 {
     font-weight: 700;
@@ -53,8 +54,10 @@ a {
     text-decoration: none;
     color: $dark;
     transition: $tr;
+    @media (hover: hover){
     &:hover {
         color: $red;
+    }
     }
 }
 button:hover, a:hover{
@@ -80,19 +83,24 @@ hr {
 .header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     margin: 0 auto;
     padding: 40px 0;
     max-width: 1920px;
     width: 100%;
     background-color: $back;
     z-index: 5;
+    @media (max-width: $r_desk){
+        width: 95%;
+    }
     @media (max-width: $r_tab){
         padding-top: clamp(20px, 5vw, 40px);
         padding-bottom: clamp(20px, 5vw, 40px);
     }
     &__container {
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
     &__nav {
          display: flex;
@@ -151,10 +159,11 @@ hr {
         text-align: center;
         position: relative;
         @media (max-width: $r_tab){
-            height: clamp(215px, 2vw, 310px);
+            height: clamp(215px, 41vw, 310px);
             margin-bottom: clamp(60px, 9vw, 120px);
         }
         &_img {
+        max-width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -240,9 +249,11 @@ hr {
                     font-size: clamp(0.75rem, 1vw + 0.5rem, 1rem);
                     width: clamp(125px, 24vw, 170px);
                     }
+            @media (hover: hover){
             &:hover{
                 border-bottom: 1px solid $dark;
                 cursor: pointer;
+            }
             }
             &::before {
                 content: '';
@@ -471,8 +482,8 @@ hr {
             
         }
     }
-    
 }
+
 .back-color {
     background: linear-gradient(180deg, #e7e6e6 0%, rgba(231, 230, 230, 0) 100%);
 }
@@ -689,10 +700,12 @@ hr {
         transition: $tr;
         margin-bottom: -1px;
         margin-right: -1px;
+        @media (hover: hover){
         &:hover{
             opacity: 1;
             &> img{
             filter: grayscale(0); 
+        }
         }
         }
         @media (max-width: $r_desk_mini) {
@@ -871,9 +884,11 @@ hr {
                             font-size: clamp(0.75rem, 1vw + 0.5rem, 1rem);
                             width: clamp(125px, 24vw, 170px);
                             }
+                    @media (hover: hover){
                     &:hover{
                         border-bottom: 1px solid $dark;
                         cursor: pointer;
+                    }
                     }
                     &::before {
                         content: '';
@@ -1184,9 +1199,11 @@ hr {
                 @media (max-width: $r_tab) {
                     font-size: clamp(0.625rem, 1vw + 0.12rem, 0.75rem);
                 }
+                @media (hover: hover){
                 &:hover {
                     color: $dark;
                 }
+            }
             }
         }
     }
