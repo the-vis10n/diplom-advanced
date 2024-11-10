@@ -19,7 +19,7 @@
                 <a href="tel:+70298073414" class="header__info_tel">8 029 807-34-14</a>
                 <a href="#" class="header__info_email">belov.e.e@mail.ru</a>
             </div>
-            <button class="burger-menu" id="modal" onclick="openModal()"></button>
+            <button class="burger-menu" id="btnBurger"></button>
         </div>
    </header>
     <div class="container">
@@ -32,7 +32,7 @@
                 <h1 class="banner__title banner__title_job">web-разработчик</h1>
             </div>
             <div class="banner__social">
-                <button class="banner__social banner__social_btn _btn">Обсудить проект</button>
+                <button class="banner__social banner__social_btn _btn" id="formBntOpenBanner">Обсудить проект</button>
                 <ul class="banner__social_box _social">
                     <li class="banner__social_box_link"><a href="https://vk.com/below_evgeny">VK</a></li>
                     <li class="banner__social_box_link"><a href="https://t.me/evbe1ov">Telegram</a></li>
@@ -195,7 +195,7 @@
                     </ul>
                 </div>
                 <div class="price__list__bottom">
-                   <div class="price__list__bottom_box"><button class="price__list__bottom_box_btn _btn">Обсудить проект</button></div> 
+                   <div class="price__list__bottom_box" id="formBntOpenFirst"><button class="price__list__bottom_box_btn _btn" >Обсудить проект</button></div> 
                     <p class="price__list__bottom_sum">От 7 000 Р</p></li>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                 </div>
                 <div class="price__list__bottom">
                    <div class="price__list__bottom_box">
-                    <button class="price__list__bottom_box_btn _btn">Обсудить проект</button></div> 
+                    <button class="price__list__bottom_box_btn _btn" id="formBntOpenSecond">Обсудить проект</button></div> 
                     <p class="price__list__bottom_sum">От 10 000 Р</p></li>
                 </div>
             </div>
@@ -236,7 +236,7 @@
                     </ul>
                 </div>
                 <div class="price__list__bottom">
-                   <div class="price__list__bottom_box"><button class="price__list__bottom_box_btn _btn">Обсудить проект</button></div> 
+                   <div class="price__list__bottom_box"><button class="price__list__bottom_box_btn _btn" id="formBntOpenThird">Обсудить проект</button></div> 
                     <p class="price__list__bottom_sum">От 15 000 Р</p></li>
                 </div>
             </div>
@@ -298,9 +298,8 @@
     </div>
 
     <div class="modal" id="modal">
-        
         <nav class="modal__nav">
-            <button class="modal_close" onclick="closeModal()"></button>
+            <button class="modal_close" id="btnClose"></button>
             <nav class="modal__nav_box">
                 <a href="#" class="modal__nav_box_link">Обо мне</a>
                 <a href="#" class="modal__nav_box_link">Портфолио</a>
@@ -337,7 +336,32 @@
             </li>
         </ul>
     </div>
-    <script src="index.js"></script>
+    <div class="modal-form" id="modalForm">
+        <h1 class="modal-form_title">Расскажите о своем проекте</h1>
+        <button class="modal-form_close" id="formBntClose"></button>
+        <p class="modal-form_text">Заполните все поля, и я свяжусь с вами <br> в ближайшее время</p>
+        <div class="form__bottom_input modal-form_input">
+            <label class="form__bottom_input_title modal-form_input_title">Телефон или почта</label>
+            <input class="form__bottom_input_field modal-form_input_field" type="text" placeholder="Введите телефон">
+            <label class="drop">
+                <label class="form__bottom_input_title modal-form_input_title">Выберите удобный способ связи</label>
+                <input type="checkbox">
+                <span class="control">Telegram</span> 
+                <ul class="drop-items">
+                  <li class="item-drop">
+                    <span class="list_span">WhatsApp</span></li>        
+                  <li class="item-drop">
+                    <span class="list_span">Viber</span></li>
+                  <li class="item-drop">
+                    <span class="list_span">Звонок на телефон</span></li>
+                    <li class="item-drop">
+                    <span class="list_span">SMS сообщение</span></li>
+                </ul>
+                <label for="target-drop-example" class="overlay-close"></label>
+              </label>
+            <button class="form__bottom_input_btn" type="submit">Отправить</button>
+        </div>
+    </div>
 </body>
 </html>
 
