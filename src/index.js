@@ -15,7 +15,6 @@ btnOpen.onclick = function () {
     container.style.filter = "blur(5px)";
     header.style.filter = "blur(5px)"
     backColor.style.filter = "blur(5px)"
-    
 }
 btnClose.onclick = function () {
     modal.style.display = "none";
