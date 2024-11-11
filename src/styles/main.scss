@@ -7,8 +7,8 @@ body{
     margin: 0 auto;
     font-weight: 400;
     color: $dark;
-    position: relative;
     overflow-x: hidden;
+    position: relative;
 }
 h1 {
     font-weight: 700;
@@ -234,6 +234,7 @@ hr {
         display: flex;
         justify-content: space-between;
         &_btn{
+            scroll-margin-top: 450px;
             font-weight: 700;
             font-size: 16px;
             line-height: 150%;
@@ -865,8 +866,9 @@ hr {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
-            &_box {
+            &_box { 
                 &_btn {
+                    scroll-margin-top: 300px;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 150%;
@@ -1432,13 +1434,13 @@ hr {
     }
 }
 .modal-form {
+    scroll-margin-top: 150px;
     display: none;
     width: 600px;
+    height: 477px;
     position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    inset: 0;
+    margin: auto;
     background-color: $light;
     z-index: 100;
     padding: 55px 20px 40px 20px;
